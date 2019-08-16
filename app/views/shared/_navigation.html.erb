@@ -2,6 +2,11 @@
   <%= link_to 'Home',root_path, class:'item' %>
 </a>
 <div class="right menu">
+<% if user_signed_in? %>
+  <a>
+    <%= link_to current_user.email,edit_user_registration_path, class:'item' %>
+  </a>
+<% end %>
   <a>
     <%= link_to 'Login',new_user_session_path, class:'item' %>
   </a>
