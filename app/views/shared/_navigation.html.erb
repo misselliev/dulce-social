@@ -1,13 +1,11 @@
-<a class="item">    
-Home
+<a>    
+  <%= link_to 'Home',root_path, class:'item' %>
 </a>
 <div class="right menu">
-  <a class="item">
-  Login
-    <% link_to 'Login',new_user_session_path, class:'item' %>
+  <a>
+    <%= link_to 'Login',new_user_session_path, class:'item' %>
   </a>
-  <a class="item">
-  Signup
-    <% link_to 'Signup',new_user_registration_path, class:'item' %>
+  <a>
+    <%= link_to 'Signup',new_user_registration_path, class:'item' %>
   </a>
 </div>
