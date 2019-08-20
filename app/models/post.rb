@@ -3,5 +3,5 @@ class Post < ApplicationRecord
   has_many :comments
   has_many :likes
 
-  validates :content, presence: :true, lenght: {maximum: 500}
+  validates :content, presence: :true, length: {maximum: 500}
 end
