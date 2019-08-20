@@ -17,7 +17,6 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'mini_racer', platforms: :ruby
 
 gem 'devise'
-gem 'pry'
 gem 'hirb'  
 gem 'omniauth-facebook'
 gem 'semantic-ui-sass'
@@ -51,9 +50,7 @@ group :development do
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'rspec-rails'
   gem 'faker'
-  gem 'factory_bot_rails'
   gem 'spring'
   gem 'spring-commands-rspec'
   gem 'spring-watcher-listen', '~> 2.0.0'
@@ -61,7 +58,11 @@ end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
+  gem 'factory_bot_rails'
+  gem 'rspec-rails'
+  gem 'pry'
   gem 'capybara', '>= 2.15'
+  gem 'shoulda'
   gem 'database_cleaner'
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome

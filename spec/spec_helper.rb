@@ -45,6 +45,7 @@ RSpec.configure do |config|
   config.shared_context_metadata_behavior = :apply_to_host_groups
   config.order = :random # runs test cases in random order
   Kernel.srand config.seed # to replicate exact test order 
+  
 # The settings below are suggested to provide a good initial experience
 # with RSpec, but feel free to customize to your heart's content.
 =begin
