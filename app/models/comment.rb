@@ -1,6 +1,6 @@
 class Comment < ApplicationRecord
+  belongs_to :post
   belongs_to :commenter, class_name: 'User'
-  belongs_to :post, class_name: 'Post'
 
   validates :content, presence: :true, length: {maximum: 500}
   validates :commenter_id, presence: :true

@@ -1,13 +1,12 @@
 require 'rails_helper'
 
-RSpec.describe Post, type: :model do
+RSpec.describe Comment, type: :model do
   let (:author) { User.new(:id=>1,:name => "Dulce", :lastname => 'Woof', :email => "dulce@woof.com", :password => "123456", :password_confirmation => "123456") }
-  let (:post) {Post.new(:id =>1, :content => Faker::Lorem.sentence, :author => author)}
-  let (:comment) {Comment.new(:id=>1, :content=> 'a'*498, :post => post, :commenter => author)}
+  let (:post1) {Post.new(:id =>3, :content => Faker::Lorem.sentence, :author => author)}
+  let (:comment) {Comment.new(:id=>1, :content=> 'a'*498, :post => post1, :commenter => author)}
 
   describe 'basic validations for comment model' do
     it 'is valid when the length is right, it has an author and a post' do
-      post
       byebug
       expect(comment).to be_valid
     end
@@ -35,7 +34,7 @@ RSpec.describe Post, type: :model do
 
   describe 'validating associations' do
     it 'belongs to user' do
-      should belong_to(:author) 
+      should belong_to(:commenter) 
     end
 
     it 'belongs to post' do

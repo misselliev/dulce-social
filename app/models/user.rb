@@ -3,7 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  has_many :posts, foreign_key: :author_id
+  has_many :posts, foreign_key: :author_id, dependent: :destroy
   has_many :comments, dependent: :destroy
   has_many :likes
   has_many :friendships, dependent: :destroy
@@ -17,6 +17,7 @@ class User < ApplicationRecord
 
   before_save :downcase_email
 
+  private
   def downcase_email
     email.downcase!
   end

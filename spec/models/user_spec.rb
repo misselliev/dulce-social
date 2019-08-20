@@ -13,7 +13,7 @@ RSpec.describe User, type: :model do
       expect(user).not_to be_valid 
     end
     
-      it 'has a valid lastname' do
+    it 'has a valid lastname' do
       expect(user).to be_valid 
     end
 
