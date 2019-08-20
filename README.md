@@ -9,7 +9,7 @@ To be updated
 
 # Currently working on
 
-Setup
+Setting up post and user models with testing.
 
 # About
 
