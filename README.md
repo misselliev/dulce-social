@@ -9,7 +9,7 @@ To be updated
 
 # Currently working on
 
-Setting up post and user models with testing.
+Setting up like and comment models with testing.
 
 # About
 
