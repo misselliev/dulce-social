@@ -7,7 +7,6 @@ RSpec.describe Comment, type: :model do
 
   describe 'basic validations for comment model' do
     it 'is valid when the length is right, it has an author and a post' do
-      byebug
       expect(comment).to be_valid
     end
 
